@@ -12,7 +12,7 @@ As evidenced throughout this homework.
 ## Problem 1 - Birthday Paradox Findings
 The birthday paradox is the notion that for a randomly selected group of individuals, there is ~51% chance that at least two people in the group share the same birthday. Lets find out more about this!
 
-```{r}
+```{r, echo = FALSE}
 library(tidyverse)
 # Make a function for the birthday paradox itself
 birthday_pardox = function(n) {
@@ -31,8 +31,10 @@ paradox_results_df =
          = map_lgl(n, birthday_pardox)) %>% 
   group_by(n) %>% 
   summarize(prob = mean(result))
+```
 
 
+```{r}
 # Plot the birthday paradox!
 paradox_results_df %>% 
   ggplot(aes(x = n, y = prob)) +
@@ -58,7 +60,7 @@ Guided by the Birthday Paradox, this figure highlights that as the size of a gro
 
 
 ## Problem 2 - RCT Longitudinal Data
-```{r}
+```{r, echo = FALSE}
 # Create a df with all RCT data
 path_to_data = "./data/" 
 all_files = list.files(path = path_to_data, full.names = FALSE)
@@ -93,8 +95,11 @@ tidy_df = parsed_data %>%
     values_to = "observation"
   ) %>% 
   mutate(week = as.numeric(week))
+```
 
 
+
+```{r}
 # Plot the results 
 tidy_df %>% 
   ggplot(aes
@@ -123,7 +128,7 @@ Based on this spaghetti plot, participants in the control arm of the RCT maintai
 
 
 ## Problem 3 - T-Test
-```{r}
+```{r, echo = FALSE}
 # Function for a one-sample t-test
 sim_t_test = function
 (n = 30, mu, sigma = 5) {
