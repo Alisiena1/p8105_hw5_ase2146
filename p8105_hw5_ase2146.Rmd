@@ -50,3 +50,11 @@ paradox_results_df %>%
     plot.subtitle = element_text(color = "#457b9a")
   )
 ```
+
+
+#### Figure 1 Interpretation
+Guided by the Birthday Paradox, this figure highlights that as the size of a group increases, the probability of at least two individuals sharing a birthday increases (not linear manner). This aligns with our understanding because the number of possible pairs of individuals grows quickly rather than linearly with group size.
+
+
+
+## Problem 2 - 
