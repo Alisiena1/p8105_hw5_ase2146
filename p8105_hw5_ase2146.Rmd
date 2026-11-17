@@ -1,0 +1,16 @@
+---
+title: "Homework 5"
+author: "Ali Early"
+output: github_document
+---
+
+## Problem 0
+As evidenced throughout this homework.
+
+
+
+## Problem 1
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
